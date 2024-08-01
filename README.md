@@ -22,8 +22,7 @@ Este projeto implementa um sistema para gerenciar e selecionar famílias aptas a
 
 1. Clone o repositório:
    ```sh
-   git clone https://github.com/seu-usuario/sua-repositorio.git
-   cd sua-repositorio
+   git clone https://github.com/RobsonPassos/SelecaoCasaPopular.git
 
 2. Na raiz da branch atual tem uma pasta chamada "desenvolvimento", dentro dela tem uma coleção para ser exportada para o POSTMAN para testar as APIs.
 
