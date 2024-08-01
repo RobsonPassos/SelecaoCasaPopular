@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "20d70f7d-0989-4a38-82af-f19b3abf07f5",
+		"name": "Casa Popular",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13955586"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/pessoas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"João\",\r\n  \"cpf\": \"12345678900\",\r\n  \"dependentesMenoresIdade\": 3,\r\n  \"qntPessoasFamilia\": 5,\r\n  \"rendaTotalFamilia\": 800.00,\r\n  \"temCasaPropria\": false,\r\n  \"pontosAptoGanharCasa\": 0,\r\n  \"contempladoCasa\": false,\r\n  \"endereco\": {\r\n    \"estado\": \"SP\",\r\n    \"cidade\": \"São Paulo\",\r\n    \"logradouro\": \"Rua A\",\r\n    \"numero\": \"100\",\r\n    \"cep\": \"12345678\"\r\n  }\r\n}"
+				},
+				"url": "http://localhost:8080/api/pessoas"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todas Pessoas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"url": "http://localhost:8080/api/pessoas"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pessoas por Pontos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pessoas/pontos/3?page=0&size=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoas",
+						"pontos",
+						"3"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
